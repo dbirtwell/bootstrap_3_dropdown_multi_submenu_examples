@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--
+https://stackoverflow.com/questions/35816268/how-to-create-dropdown-menu-with-nested-submenu-using-jquery
+-->
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+
+</style>
+
+</head>
+<body>
+<div class="container">
+
+<ul class="nav navbar-nav" id="main-navigation">
+    <li class=""><a href="#">Accueil</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Groupe Cible <i class="fa fa-angle-down"></i></a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu" id="men">
+          <a class="test" tabindex="-1" href="#">Cible Etudes and Conseils <i class="fa fa-angle-right"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-submenu" id="men">
+              <a class="test" tabindex="-1">Qui Sommes Nous <i class="fa fa-angle-right"></i></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu" id="men">
+                  <a class="test" href="#" tabindex="0" data-toggle="dropdown">Présentation </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a href="#" tabindex="0">Cible Etudes/Conseil</a></li>
+                    <li><a href="#" tabindex="0">Notre Vision</a></li>
+                    <li><a href="#" tabindex="0">Notre Mission</a></li>
+                    <li><a href="#" tabindex="0">Nos Valeurs</a></li>
+                    <li><a href="#" tabindex="0">Notre Force</a></li>
+                    <li><a href="#" tabindex="0">Nos Filiales</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" tabindex="0">Notre Equipe</a></li>
+                <li><a href="#" tabindex="0">Nous Ecrire</a></li>
+                <li><a href="#" tabindex="0">Retrouvez Nous </a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu" id="men">
+              <a class="test" tabindex="0" href="#" data-toggle="dropdown">Notre Offre  </a>
+
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu" id="men">
+                  <a class="test" tabindex="0" data-toggle="dropdown">Les Enquêtes et Sondage</a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="0">procédures Qualité</a></li>
+                    <li><a href="#" tabindex="0">Méthodes</a></li>
+                    <li><a tabindex="0">outils de Collecte</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu" id="men">
+                  <a class="test" tabindex="0" data-toggle="dropdown">Les Etudes</a>
+                  <ul class="dropdown-menu">
+                    <li class="test" class="dropdown-submenu">
+                      <a class="test" href="#" tabindex="0" data-toggle="dropdown">Marketing</a>
+                      <ul class="dropdown-menu">
+                        <li><a tabindex="0">Marché</a></li>
+                        <li><a tabindex="0">Consommateurs</a></li>
+                        <li><a tabindex="0">Stratégie Marketing</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="test" class="test" href="<?=url::site('fr/a_propos/14/development')?>" tabindex="0" data-toggle="dropdown">Développement</a>
+                      <ul class="dropdown-menu">
+                        <li><a tabindex="0">Impact environnemental</a></li>
+                        <li><a tabindex="0">Développement Urbain et Local</a></li>
+                        <li><a tabindex="0">Assainissement</a></li>
+                        <li><a tabindex="0">Evaluation des projets et programmes</a></li>
+                      </ul>
+                    </li>
+                    <li><a tabindex="0">Moyens Logistiques</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="test" tabindex="0" data-toggle="dropdown">Le Conseil</a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="0">Conseil en Marketing</a></li>
+                    <li><a tabindex="0">Conseil en Gestion</a></li>
+                    <li><a tabindex="0">Recherche de Financement</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="test" tabindex="0" data-toggle="dropdown">La Formation </a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="0">Formation en Vente</a></li>
+                    <li><a tabindex="0">Formation en Marketing</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="test" href="#" tabindex="0" data-toggle="dropdown">Nous Ont Fait Confiance  </a>
+              <ul class="dropdown-menu">
+                <li><a href="#" tabindex="0">Cameroun</a></li>
+                <li><a href="#" tabindex="0">Afrique</a></li>
+                <li><a href="#" tabindex="0">L'international</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="test" href="#" tabindex="0" data-toggle="dropdown">Où Intervenons Nous </a>
+
+              <ul class="dropdown-menu">
+                <li><a href="#" tabindex="0">Cameroun</a></li>
+                <li><a href="#" tabindex="0">Gabon</a></li>
+                <li><a href="#" tabindex="0">Tchad</a></li>
+                <li><a href="#" tabindex="0">Congo Brazzaville</a></li>
+                <li><a href="#" tabindex="0">Côte d’Ivoire</a></li>
+                <li><a href="#" tabindex="0">Burkina Faso</a></li>
+                <li><a href="#" tabindex="0">Mauritanie</a></li>
+                <li><a href="#" tabindex="0">Mali</a></li>
+                <li><a href="#" tabindex="0">Bénin</a></li>
+                <li><a href="#" tabindex="0">Guinée Conakry</a></li>
+                <li><a href="#" tabindex="0">Niger</a></li>
+                <li><a href="#" tabindex="0">Togo</a></li>
+                <li><a href="#" tabindex="0">Djibouti</a></li>
+                <li><a href="#" tabindex="0">Rwanda</a></li>
+                <li><a href="#" tabindex="0">Burundi</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="test" href="#" tabindex="0" data-toggle="dropdown">Nos Publications  </a>
+
+              <ul class="dropdown-menu">
+                <li><a href="#" tabindex="0" href="">Articles</a></li>
+                <li><a href="#" tabindex="0" href="">Résultats</a></li>
+                <li><a href="#" tabindex="0" href="">New</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- =========================== cible RH ============================== -->
+        <li class="dropdown-submenu">
+          <a class="test" href="#" tabindex="0" data-toggle="dropdown">Cible RH Emploi</a>
+
+          <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+              <a class="test" href="#" tabindex="0" data-toggle="dropdown">Qui Sommes Nous </a>
+
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a class="test" href="#" tabindex="0" data-toggle="dropdown">Présentation </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="0">Cible RH Emploi</a></li>
+                    <li><a tabindex="0">Notre Vision</a></li>
+                    <li><a tabindex="0">Notre Mission</a></li>
+                    <li><a tabindex="0">Nos Valeurs</a></li>
+                    <li><a tabindex="0">Notre Force</a></li>
+                    <li><a tabindex="0">Nos Filiales</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" tabindex="0">Notre Equipe</a></li>
+                <li><a href="#" tabindex="0">Nous Ecrire</a></li>
+                <li><a href="#" tabindex="0">Retrouvez Nous </a></li>
+              </ul>
+            </li>
+            <li><a href="#">Notre Offre  </a> </li>
+            <li class="dropdown-submenu">
+              <a class="test" href="#" tabindex="0" data-toggle="dropdown">Nous Ont Fait Confiance  </a>
+              <ul class="dropdown-menu">
+                <li><a href="#" tabindex="0">Cameroun</a></li>
+                <li><a href="#" tabindex="0">Afique</a></li>
+                <li><a href="#" tabindex="0">L'international</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="test" href="#" tabindex="0" data-toggle="dropdown">Où Intervenons Nous </a>
+
+              <ul class="dropdown-menu">
+                <li><a href="#" tabindex="0">Cameroun</a></li>
+                <li><a href="#" tabindex="0">Gabon</a></li>
+                <li><a href="#" tabindex="0">Tchad</a></li>
+                <li><a href="#" tabindex="0">Congo Brazzaville</a></li>
+                <li><a href="#" tabindex="0">Côte d’Ivoire</a></li>
+                <li><a href="#" tabindex="0">Burkina Faso</a></li>
+                <li><a href="#" tabindex="0">Mauritanie</a></li>
+                <li><a href="#" tabindex="0">Mali</a></li>
+                <li><a href="#" tabindex="0">Bénin</a></li>
+                <li><a href="#" tabindex="0">Guinée Conakry</a></li>
+                <li><a href="" tabindex="0">Niger</a></li>
+                <li><a href="" tabindex="0">Togo</a></li>
+                <li><a href="#" tabindex="0">Djibouti</a></li>
+                <li><a href="" tabindex="0">Rwanda</a></li>
+                <li><a href="" tabindex="0">Burundi</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu" id="men">
+              <a class="test" href="" tabindex="0" data-toggle="dropdown">Nos Publications  </a>
+
+              <ul class="dropdown-menu">
+                <li><a href="" tabindex="0" href="">Articles</a></li>
+                <li><a href="" tabindex="0" href="">Résultats</a></li>
+                <li><a href="" tabindex="0" href="">New</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </li>
+    <li class="dropdown ">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
+      <ul class="dropdown-menu">
+        <li>Web Design</li>
+        <li>SEO</li>
+      </ul>
+    </li>
+
+    <li class="dropdown ">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clients <i class="fa fa-angle-down"></i></a>
+      <ul class="dropdown-menu">
+        <li>MTN</li>
+        <li>Apple</li>
+      </ul>
+    </li>
+
+    <li class="dropdown ">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Team <i class="fa fa-angle-down"></i></a>
+      <ul class="dropdown-menu">
+        <li>Mark</li>
+        <li>John</li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Partners <i class="fa fa-angle-down"></i></a>
+      <ul class="dropdown-menu">
+        <li>Bootstrap</li>
+        <li>Ubuntu</li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
+      <ul class="dropdown-menu">
+        <li>Perl</li>
+        <li>Python</li>
+      </ul>
+    </li>
+
+    <li class="dropdown active">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <i class="fa fa-angle-down"></i></a>
+      <ul class="dropdown-menu">
+        <li>Java</li>
+        <li>Ajax</li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacts <i class="fa fa-angle-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Contact Cible Etudes/Conseils</a></li>
+        <li><a href="">Contact Cible RH</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+<script>
+
+$(document).ready(function() {
+	$('.dropdown-submenu').css("position","relative");
+	$('.dropdown-submenu .dropdown-menu').css({"top": "0","left": "100%","margin-top": "-1px"});
+	$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+		// Avoid following the href location when clicking
+		event.preventDefault(); 
+		// Avoid having the menu to close when clicking
+		event.stopPropagation(); 
+		// Re-add .open to parent sub-menu item
+		$(this).parent().addClass('open');
+		$(this).parent().find("ul").parent().find("li.dropdown").addClass('open');
+	});
+});
+</script>
+
+</body>
+</html>
